@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: row;
     border: solid 1px black;
+    width: 100%;
+    margin: 0px 10%;
+    justify-content: center;
+    gap:calc(25% / 3);
 }
-.Footer > :not(:first-child):not(:last-child) {
+/* .Footer > :not(:first-child):not(:last-child) {
     border-right: solid 1px black;
     border-left: solid 1px black;
-}
+} */
 
 .FooterBox {
     display: flex;
@@ -25,4 +29,21 @@
 .Footer_Box_Text{
     text-align: center;
     padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Footer{
+        gap:calc(5% / 3)!important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .Footer{
+        gap: 0 !important;
+        overflow: scroll !important;
+    }
+    .FooterBox {
+        overflow:visible !important;
+        padding: 0px !important;
+    }
 }
